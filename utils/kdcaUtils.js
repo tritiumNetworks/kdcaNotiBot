@@ -40,7 +40,7 @@ function kdcaRSS (cb) {
     for (const table of $$('table').toArray()) {
       const output = path + '/tables/' + uuid() + '.png'
       await html2img({
-        puppeteerArgs: { defaultViewport: { width: 770, height: 100 }, executablePath: '/usr/bin/chromium' },
+        puppeteerArgs: { defaultViewport: { width: 770, height: 100 }, executablePath: '/snap/bin/chromium' },
         html: cheerio.html(table),
         output
       })
